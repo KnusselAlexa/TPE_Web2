@@ -1,0 +1,66 @@
+body.body {
+    background-color: rgb(235, 235, 235);
+}
+
+.div-img img {
+    display: flex;
+    width: 100%;
+}
+
+div.master {
+    display: flex;
+    justify-content: center;
+}
+
+div.main {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    max-width: 60rem;
+}
+
+div.search {
+    display: flex;
+    justify-content: center;
+}
+
+div.search form {
+    flex-direction: column;
+    padding: 5px;
+    border: 2px solid rgb(104, 104, 104);
+    border-radius: 5px;
+    gap: 20px;
+}
+
+a.item-name {
+    text-decoration: none;
+    color: white;
+}
+
+a.item-name:hover {
+    color: rgb(235, 20, 20);
+}
+
+span.span {
+    color: white;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(74, 74, 74);
+}
+
+footer div.footer-container {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin: 10px;
+}
+
+div.footer-container img {
+    max-width: 40px;
+}
