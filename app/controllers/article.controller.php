@@ -2,9 +2,13 @@
 
     class ArticleController extends MainController{
 
-        function showArticle($id){
-            $article = $this->articleModel->getArticleById($id);
-            $this->articleView->showArticle($article, $this->categories, $this->email);
+        function showArticle($articleId){
+            $article = $this->articleModel->getArticleById($articleId);
+            if($article){
+                $this->articleView->showArticle($article, $this->categories, $this->email);
+            }else{
+                $this->homeView->showError("Articulo no encontrado.", $this->categories, $this->email);
+            }
         }
 
         function showArticles(){
@@ -12,9 +16,14 @@
             $this->articleView->showArticles($articles, $this->categories, $this->email);
         }
 
-        function showArticlesByCategory($category){
-            $articles = $this->articleModel->getArticlesByCategory($category);
-            $this->articleView->showArticles($articles, $this->categories, $this->email);
+        function showArticlesByCategory($categoryId){
+            $category = $this->categoryModel->getCategoryById($categoryId);
+            if($category){
+                $articles = $this->articleModel->getArticlesByCategory($categoryId);
+                $this->articleView->showArticles($articles, $this->categories, $this->email);
+            }else{
+                $this->homeView->showError("Categoria no encontrada.", $this->categories, $this->email);
+            }
         }
 
         function addArticle() {
