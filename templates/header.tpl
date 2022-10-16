@@ -51,7 +51,7 @@
                 {if {!$email}}
                     <form action="login" method="POST" class="d-flex" role="search">
                         <input class="form-control me-2" placeholder="Usuario" name="email">
-                        <input class="form-control me-2" placeholder="Contraseña" name="password">
+                        <input class="form-control me-2" type="password" placeholder="Contraseña" name="password">
                         <button class="btn btn-outline-success" type="submit">Login</button>
                     </form>
                 {else}
